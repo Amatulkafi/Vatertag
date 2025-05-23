@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Vatertags-Spiel</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background: #fdf6e3;
+      padding: 20px;
+    }
+    .character {
+      font-size: 40px;
+      display: inline-block;
+      margin: 20px;
+      position: relative;
+    }
+    .bubble {
+      background: #fff;
+      border: 1px solid #aaa;
+      border-radius: 10px;
+      padding: 10px;
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+    .heart {
+      color: red;
+      font-size: 24px;
+    }
+    #game {
+      margin-top: 40px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>👨‍👧 Vatertags-Spiel 🎉</h1>
+  <div id="game"></div>
+
+  <script>
+    const game = document.getElementById("game");
+
+    function delay(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function startGame() {
+      game.innerHTML = "";
+
+      // 1. Papa erscheint
+      const papa = createCharacter("O Papa");
+      game.appendChild(papa);
+      await delay(1000);
+
+      // 2. Ama erscheint
+      const ama = createCharacter("O Ama");
+      game.appendChild(ama);
+      await delay(1000);
+
+      // 3. Ama spricht
+      showBubble(ama, "Hallo Papa, heute ist Vatertag, deswegen habe ich für dich diese Webseite erstellt!");
+      await delay(3000);
+      showBubble(ama, "Papa, bitte lauf zum Knopf „Start“");
+      await delay(3000);
+
+      // 4. Startknopf erscheint
+      const btn = document.createElement("button");
+      btn.textContent = "Start";
+      btn.onclick = startLevel1;
+      game.appendChild(btn);
+    }
+
+    function createCharacter(text) {
+      const div = document.createElement("div");
+      div.className = "character";
+      div.textContent = text;
+      return div;
+    }
+
+    function showBubble(characterEl, text) {
+      let bubble = characterEl.querySelector(".bubble");
+      if (!bubble) {
+        bubble = document.createElement("div");
+        bubble.className = "bubble";
+        characterEl.appendChild(bubble);
+      }
+      bubble.textContent = text;
+    }
+
+    function startLevel1() {
+      game.innerHTML = "<h2>Level 1: Survival Mode gestartet!</h2>";
+
+      const papa = createCharacter("O Papa");
+      game.appendChild(papa);
+
+      // Herzen
+      const heartContainer = document.createElement("div");
+      heartContainer.innerHTML = "❤️ ❤️ ❤️ ❤️ ❤️ ❤️";
+      heartContainer.className = "heart";
+      game.appendChild(heartContainer);
+
+      const mama = createCharacter("O Mama 🥄");
+      const ama = createCharacter("O Ama");
+
+      game.appendChild(mama);
+      game.appendChild(ama);
+
+      showBubble(ama, "Papa, du musst uns alle besiegen! Oder du kannst wegrennen…");
+      showBubble(mama, "Ich greife an!");
+
+      // Du kannst später Buttons oder Tasteneingabe für Aktionen einbauen
+    }
+
+    // Spiel starten
+    startGame();
+  </script>
+</body>
+</html>
