@@ -7,23 +7,32 @@
 
 body {
   font-family: 'Comic Sans MS', cursive, sans-serif;
-  background: url('2270a4c5-866a-48cf-adbd-855f48132bbf.png') no-repeat center center fixed;
-  background-size: cover;
-  color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
 }
 
-/* Header mit Logo und Navigation */
+/* Hintergrundbild */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Header mit Medaille & Buttons */
 header {
-  background-color: #112a5c;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  background-color: rgba(17, 42, 92, 0.9);
 }
 
-.logo img {
+.medaille img {
   height: 60px;
-  border-radius: 12px;
 }
 
 .navigation button {
@@ -42,48 +51,26 @@ header {
   background-color: #5271c4;
 }
 
-/* Hauptinhalt */
-main {
-  text-align: center;
-  padding-top: 4rem;
+/* Happy Father's Day Bild */
+.headline {
+  display: block;
+  margin: 3rem auto 2rem auto;
+  max-width: 600px;
+  width: 90%;
 }
 
-/* Herz-Button */
-.heart-button {
-  background-color: #294a8b;
-  color: white;
-  font-weight: bold;
-  font-size: 1.2rem;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 50% 50% 0 0;
-  position: relative;
-  width: 100px;
-  height: 90px;
-  cursor: pointer;
-  clip-path: polygon(50% 100%, 0% 40%, 25% 0%, 50% 20%, 75% 0%, 100% 40%);
+/* Silhouette links unten */
+.silhouette {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  height: 150px;
 }
 
-/* Text */
-h1 {
-  color: #0f2a53;
-  margin-top: 2rem;
-  font-size: 3rem;
-  line-height: 1.2;
-}
-
-h1 span {
-  font-weight: normal;
-  font-size: 1.5rem;
-  letter-spacing: 4px;
-}
-
-h1 strong {
-  font-size: 4rem;
-  font-family: 'Georgia', serif;
-}
-
-h1 em {
-  font-family: 'Brush Script MT', cursive;
-  font-size: 2rem;
+/* Zeichnung rechts unten */
+.drawing {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  height: 160px;
 }
