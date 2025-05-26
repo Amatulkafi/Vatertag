@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Vatertags-Spiel – Retro Edition</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Retro pixel font from Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vatertag</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+  <header>
+    <div class="logo">
+      <img src="2270a4c5-866a-48cf-adbd-855f48132bbf.png" alt="Vatertagslogo"/>
+    </div>
+    <nav class="navigation">
+      <button>HOME</button>
+      <button>ANLEITUNG</button>
+      <button>BILDER</button>
+    </nav>
+  </header>
+
   <main>
-    <h1>👾 Vatertags-Spiel: Retro Edition 🎮</h1>
-    <section id="game-area">
-      <canvas id="game-canvas" width="480" height="320" tabindex="0" aria-label="Spielbereich"></canvas>
-      <div id="instructions">
-        <p>
-          <b>Steuerung:</b> Pfeiltasten zum Bewegen von O Papa.<br>
-          <span id="start-msg">Drücke <kbd>Enter</kbd> um zu starten!</span>
-        </p>
-      </div>
-    </section>
+    <button class="heart-button">START</button>
+    <h1><span>HAPPY</span><br/><strong>Father’s</strong><br/><em>day</em></h1>
+
+    <!-- Deko-Elemente, z. B. SVGs oder zusätzliche Bilder -->
+    <!-- Kann später noch ergänzt werden -->
   </main>
-  <script src="game.js"></script>
 </body>
 </html>
