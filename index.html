@@ -26,9 +26,9 @@
       <img src="4.svg" alt="Happy Father's Day" class="headline"/>
     </div>
 
-    <button id="openGameBtn" class="start-button">START</button>
+    <button id="openGameBtn" class="start-button">START</button> 
     <div id="scratchGame" style="display:none; margin-top:20px;">
-
+      <iframe src="https://scratch.mit.edu/projects/1179909879/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
     </div>
 
     <!-- Silhouette unten links -->
@@ -38,13 +38,9 @@
     <img src="5.svg" alt="Dad and Me Zeichnung" class="drawing"/>
   </main>
   <script>
-    document.getElementById('openGameBtn').onclick = function() {
-    var gameDiv = document.getElementById('scratchGame');
-    // Only add the iframe if it hasn't been added yet
-    if (gameDiv.innerHTML === "") {
-      gameDiv.innerHTML = `<iframe src="https://scratch.mit.edu/projects/1179909879/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>`;
-    }
-    gameDiv.style.display = 'block';
+  document.querySelector('.start-button').onclick = function() {
+    document.getElementById('scratchGame').style.display = 'block';
+    this.style.display = 'none'; // hides the START button
   };
   </script>
 </body>
