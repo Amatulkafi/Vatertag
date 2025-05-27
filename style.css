@@ -10,13 +10,13 @@ body {
   background-size: cover; /* or "contain" depending on what you want */
   background-repeat: no-repeat;
   background-position: center center;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Garet', cursive, sans-serif;
   position: relative;
   overflow-x: hidden;
 }
 
 /* Hintergrundbild */
-/*.background {
+.background {
   position: fixed;
   top: 0;
   left: 0;
@@ -49,6 +49,7 @@ header {
   margin-left: 1rem;
   cursor: pointer;
   font-weight: bold;
+   font-family: 'Garet';
 }
 
 .navigation button:hover {
