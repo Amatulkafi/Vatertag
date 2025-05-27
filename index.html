@@ -24,7 +24,11 @@
     <!-- Herz mit Start-Button -->
     <div class="heart-container">
       <img src="4.svg" alt="Happy Father's Day" class="headline"/>
-      <button class="start-button">START</button>
+    </div>
+
+    <button id="openGameBtn" class="start-button">START</button>
+    <div id="scratchGame" style="display:none; margin-top:20px;">
+
     </div>
 
     <!-- Silhouette unten links -->
@@ -33,5 +37,19 @@
     <!-- Zeichnung unten rechts -->
     <img src="5.svg" alt="Dad and Me Zeichnung" class="drawing"/>
   </main>
+  <script>
+    document.getElementById('openGameBtn').onclick = function() {
+    var gameDiv = document.getElementById('scratchGame');
+    // Only add the iframe if it hasn't been added yet
+    if (gameDiv.innerHTML === "") {
+      gameDiv.innerHTML = `<iframe src="https://scratch.mit.edu/projects/1179909879/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>`;
+    }
+    gameDiv.style.display = 'block';
+  };
+  </script>
 </body>
 </html>
+
+
+
+
