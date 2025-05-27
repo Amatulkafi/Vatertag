@@ -9,7 +9,7 @@ body {
   background-image: url('2.svg');
   background-size: cover; /* or "contain" depending on what you want */
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   font-family: 'Garet', cursive, sans-serif;
   position: relative;
   overflow-x: hidden;
