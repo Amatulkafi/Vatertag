@@ -39,6 +39,11 @@ header {
   height: 80px;
 }
 
+nav {
+  position: relative; /* or fixed/sticky if needed */
+  z-index: 10;
+}
+
 .navigation button {
   background-color: #3a5ca8;
   border: none;
