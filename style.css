@@ -1,51 +1,11 @@
-/* Grundlegendes Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --vatertag-blau: #3a5ca8; /* Farbe der Medaille für Texte */
 }
 
-body {
-  background-image: url('2.svg');
-  background-size: cover; /* or "contain" depending on what you want */
-  background-repeat: no-repeat;
-  background-position: center;
-  font-family: 'Garet', cursive, sans-serif;
-  position: relative;
-  overflow-x: hidden;
-}
-
-/* Hintergrundbild */
-.background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -10;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Header mit Medaille & Buttons */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: rgba(17, 42, 92, 0.9);
-}
-
-.medaille img {
-  height: 80px;
-}
-
-nav {
-  position: relative; /* or fixed/sticky if needed */
-  z-index: 10;
-}
+/* ...bestehender Code... */
 
 .navigation button {
-  background-color: #3a5ca8;
+  background-color: var(--vatertag-blau);
   border: none;
   border-radius: 10px;
   color: white;
@@ -54,35 +14,58 @@ nav {
   margin-left: 1rem;
   cursor: pointer;
   font-weight: bold;
-   font-family: 'Garet';
+  font-family: 'Garet', sans-serif;
 }
 
-.navigation button:hover {
-  background-color: #5271c4;
-}
-
-/* Happy Father's Day Bild */
 .headline {
   display: block;
   margin: 3rem auto 2rem auto;
-  max-width: 600px;
+  max-width: 450px;
   width: 90%;
+  position: relative;
 }
 
-/* Silhouette links unten */
-.silhouette {
-  width: 400px;
-  height: 400px;
+/* Herz mit Button zentrieren */
+.heart-container {
+  position: relative;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.start-button {
   position: absolute;
-  bottom: 20px;
-  left: 30px;
-  height: 150px;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--vatertag-blau);
+  color: white;
+  font-family: 'Garet', sans-serif;
+  font-weight: bold;
+  border: none;
+  padding: 0.4rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* Zeichnung rechts unten */
+.start-button:hover {
+  background-color: #5271c4;
+}
+
+/* SVG-Grafiken passend skalieren */
+.silhouette {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  width: 160px;
+}
+
 .drawing {
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   right: 30px;
-  height: 300px;
+  height: 250px;
 }
+
