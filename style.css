@@ -39,6 +39,17 @@ header {
   background-color: rgba(17, 42, 92, 0.9);
 }
 
+.fullscreen-iframe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  border: none;
+  background: #fff;
+}
+
 .medaille img {
   height: 80px;
 }
