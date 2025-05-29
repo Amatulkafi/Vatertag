@@ -39,10 +39,18 @@
   </main>
   <script>
   document.querySelector('.start-button').onclick = function() {
-    document.getElementById('scratchGame').style.display = 'block';
-    this.style.display = 'none'; // hides the START button
+  // Show the game
+  document.getElementById('scratchGame').style.display = 'block';
+  // Make iframe fullscreen
+  document.querySelector('#scratchGame iframe').classList.add('fullscreen-iframe');
+  // Hide header and all images
+  document.querySelector('header').style.display = 'none';
+  document.querySelector('.silhouette').style.display = 'none';
+  document.querySelector('.drawing').style.display = 'none';
+  document.querySelector('.heart-container').style.display = 'none';
+  this.style.display = 'none'; // hides the START button
   };
-  </script>
+</script>
 </body>
 </html>
 
